@@ -1,0 +1,154 @@
+@import 'normalize.css';
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0 auto;
+  padding: 48px 36px;
+  height: 100vh;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  background: #1D1D26 fixed;
+}
+@media (max-width: 640px) {
+  body {
+    padding: 24px 18px;
+    font-size: 14px;
+  }
+}
+
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
+  -webkit-text-size-adjust: inherit;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #8C8C9E;
+}
+
+.App {
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+@media (max-width: 640px) {
+  .container {
+    gap: 24px;
+  }
+}
+
+.swiper .swiper-slide {
+  width: 100px;
+  display: flex;
+}
+@media (max-width: 640px) {
+  .swiper .swiper-slide {
+    width: 80px;
+  }
+}
+
+.swiper {
+  display: flex;
+  gap: 10px;
+  height: auto;
+  border-radius: 24px;
+  background: #292934;
+  overflow: hidden;
+}
+
+.block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 640px) {
+  .block {
+    flex-direction: column-reverse;
+  }
+}
+
+.header {
+  margin-bottom: 10px;
+  font-size: 72px;
+  font-weight: 400;
+}
+@media (max-width: 640px) {
+  .header {
+    font-size: 64px;
+  }
+}
+
+.highlight {
+  font-weight: 700;
+}
+
+.textWrapper {
+  position: relative;
+  flex-basis: 50%;
+}
+@media (max-width: 640px) {
+  .textWrapper {
+    transform: translateY(-200px);
+    margin-bottom: -100px;
+  }
+}
+
+.subtitle {
+  margin-bottom: 36px;
+  color: #8C8C9E;
+}
+
+.buttons {
+  display: flex;
+  gap: 24px;
+}
+.buttons a {
+  flex-basis: 50%;
+}
+
+.imageWrapper {
+  flex-basis: 50%;
+}
+@media (max-width: 640px) {
+  .imageWrapper {
+    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0) 25%, rgb(29, 29, 38) 75%);
+  }
+}
+
+.image {
+  display: block;
+  position: relative;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/*# sourceMappingURL=Home.module.css.map */

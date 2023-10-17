@@ -1,0 +1,171 @@
+@import 'normalize.css';
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0 auto;
+  padding: 48px 36px;
+  height: 100vh;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  background: #1D1D26 fixed;
+}
+@media (max-width: 640px) {
+  body {
+    padding: 24px 18px;
+    font-size: 14px;
+  }
+}
+
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
+  -webkit-text-size-adjust: inherit;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #8C8C9E;
+}
+
+.App {
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+@media (max-width: 640px) {
+  .container {
+    gap: 24px;
+  }
+}
+
+.swiper .swiper-slide {
+  width: 100px;
+  display: flex;
+}
+@media (max-width: 640px) {
+  .swiper .swiper-slide {
+    width: 80px;
+  }
+}
+
+.swiper {
+  display: flex;
+  gap: 10px;
+  height: auto;
+  border-radius: 24px;
+  background: #292934;
+  overflow: hidden;
+}
+
+.form {
+  display: flex;
+  gap: 18px;
+  flex-direction: column;
+  width: 100%;
+  padding: 36px;
+}
+
+.modalFormFieldWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formFieldWrapper {
+  margin-bottom: 10px;
+}
+
+.modalBtnWrapper {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+  z-index: 0;
+}
+
+.background {
+  position: fixed;
+  padding: 24px 18px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.containerModal {
+  display: flex;
+  width: 420px;
+  height: max-content;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 24px;
+  background: #292934;
+  animation: moveUp 0.5s ease-in-out forwards;
+  box-shadow: 7px 7px 23px 0 rgba(0, 0, 0, 0.33), 2px 2px 12px 0 rgba(0, 0, 0, 0.5);
+}
+
+.containerHide {
+  animation: moveDown 0.5s ease-in-out forwards;
+}
+
+.errorMessage {
+  color: #FF7BA3;
+  font-size: 15px;
+}
+
+@keyframes moveUp {
+  0% {
+    transform: translate(0%, -100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+}
+@keyframes moveDown {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0%, -100%);
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=UpdateUserDataModal.module.css.map */

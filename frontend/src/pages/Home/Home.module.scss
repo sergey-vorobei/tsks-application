@@ -1,0 +1,65 @@
+@import "../../app/assets/styles/index";
+
+.block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include md-device {
+    flex-direction: column-reverse;
+  }
+}
+
+.header {
+  margin-bottom: 10px;
+  font-size: 72px;
+  font-weight: 400;
+
+  @include md-device {
+    font-size: 64px;
+  }
+}
+
+.highlight {
+  font-weight: 700;
+}
+
+.textWrapper {
+  position: relative;
+  flex-basis: 50%;
+
+  @include md-device {
+    transform: translateY(-200px);
+    margin-bottom: -100px;
+  }
+}
+
+.subtitle {
+  margin-bottom: 36px;
+  color: $secondary-font-color;
+}
+
+.buttons {
+  display: flex;
+  gap: 24px;
+
+  a {
+    flex-basis: 50%;
+  }
+}
+
+.imageWrapper {
+  flex-basis: 50%;
+
+  @include md-device {
+    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0) 25%, rgba(29, 29, 38, 1) 75%);
+  }
+}
+
+.image {
+  display:block;
+  position:relative;
+  width: 100%;
+  object-fit: cover;
+  z-index:-1;
+}

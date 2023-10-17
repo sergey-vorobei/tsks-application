@@ -1,0 +1,86 @@
+@import '../../app/assets/styles/index';
+
+.block {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  width: 24px;
+  height: 24px;
+}
+
+.input {
+  appearance: none;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+
+  &:before {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: $gradient-accent-color;
+    content: "";
+    border-radius: 6px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:after {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: $secondary-background-color;
+    content: "";
+    border-radius: 4px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.inputWrapperLg {
+  width: 36px;
+  height: 36px;
+}
+
+.inputLg {
+  &:before {
+    width: 39px;
+    height: 39px;
+    border-radius: 12px;
+  }
+
+  &:after {
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+  }
+}
+
+.label {
+  display: flex;
+  font-size: 18px;
+}
+
+.checked {
+  &:after {
+    background: $gradient-accent-color;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.checkedIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+

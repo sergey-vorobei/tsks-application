@@ -1,0 +1,49 @@
+@import "../../app/assets/styles/index";
+
+.titleWrapper {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.onLeft {
+  justify-content: flex-start;
+
+}
+
+.title {
+  color: $main-font-color;
+  font-size: 36px;
+  font-weight: 700;
+
+  @include md-device {
+    font-size: 24px;
+  }
+}
+
+.button {
+  display: flex;
+  padding: 8px;
+  align-items: center;
+  border-radius: 12px;
+  border: none;
+  background: $secondary-background-color;
+  cursor: pointer;
+
+  svg {
+    path {
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  &:hover {
+    svg {
+      path {
+        stroke: white;
+      }
+    }
+  }
+}

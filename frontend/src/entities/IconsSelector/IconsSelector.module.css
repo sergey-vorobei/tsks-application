@@ -1,0 +1,150 @@
+@import 'normalize.css';
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0 auto;
+  padding: 48px 36px;
+  height: 100vh;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  background: #1D1D26 fixed;
+}
+@media (max-width: 640px) {
+  body {
+    padding: 24px 18px;
+    font-size: 14px;
+  }
+}
+
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
+  -webkit-text-size-adjust: inherit;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #8C8C9E;
+}
+
+.App {
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+@media (max-width: 640px) {
+  .container {
+    gap: 24px;
+  }
+}
+
+.swiper .swiper-slide {
+  width: 100px;
+  display: flex;
+}
+@media (max-width: 640px) {
+  .swiper .swiper-slide {
+    width: 80px;
+  }
+}
+
+.swiper {
+  display: flex;
+  gap: 10px;
+  height: auto;
+  border-radius: 24px;
+  background: #292934;
+  overflow: hidden;
+}
+
+.blockSelect {
+  position: relative;
+  width: max-content;
+  cursor: pointer;
+}
+
+.selectedOption {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 16px 24px;
+  border: 1px solid #464654;
+  border-radius: 12px;
+  background-color: #292934;
+}
+
+.options {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  display: none;
+  justify-content: space-between;
+  gap: 22px;
+  width: 232px;
+  height: min-content;
+  overflow-y: auto;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid #464654;
+  border-radius: 12px;
+  background-color: #292934;
+  z-index: 999;
+}
+
+.open .options {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.option {
+  display: flex;
+  width: 28px;
+  height: 28px;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s;
+}
+.option:hover {
+  transform: scale(1.2);
+}
+
+.iconWrapper {
+  display: flex;
+  width: 64px;
+  height: 64px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+  background: linear-gradient(190deg, #FFCFAF 0%, #FF7BA3 51.56%, #C22BB3 100%);
+  box-shadow: 4px 7px 24px 0 rgba(245, 110, 166, 0.25), 3px 3px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+/*# sourceMappingURL=IconsSelector.module.css.map */

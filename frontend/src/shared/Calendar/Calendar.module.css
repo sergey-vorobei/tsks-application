@@ -1,0 +1,195 @@
+@import 'normalize.css';
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0 auto;
+  padding: 48px 36px;
+  height: 100vh;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  background: #1D1D26 fixed;
+}
+@media (max-width: 640px) {
+  body {
+    padding: 24px 18px;
+    font-size: 14px;
+  }
+}
+
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
+  -webkit-text-size-adjust: inherit;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #8C8C9E;
+}
+
+.App {
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+@media (max-width: 640px) {
+  .container {
+    gap: 24px;
+  }
+}
+
+.swiper .swiper-slide {
+  width: 100px;
+  display: flex;
+}
+@media (max-width: 640px) {
+  .swiper .swiper-slide {
+    width: 80px;
+  }
+}
+
+.swiper {
+  display: flex;
+  gap: 10px;
+  height: auto;
+  border-radius: 24px;
+  background: #292934;
+  overflow: hidden;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.monthWrapper {
+  display: flex;
+  width: 466px;
+  align-items: center;
+  gap: 8px;
+}
+
+.buttonArrow {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  border: none;
+  background: #292934;
+  cursor: pointer;
+}
+.buttonArrow svg path {
+  transition: all 0.3s ease-in-out;
+}
+.buttonArrow:hover svg path {
+  stroke: white;
+}
+.buttonArrow:hover {
+  border: 2px solid #464654;
+  cursor: pointer;
+}
+
+.calendarWrapper {
+  width: 100%;
+}
+
+.month {
+  color: #FFFFFF;
+  text-align: center;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+@media (max-width: 640px) {
+  .month {
+    font-size: 20px;
+  }
+}
+
+.year {
+  color: #FFFFFF;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+@media (max-width: 640px) {
+  .year {
+    font-size: 20px;
+  }
+}
+
+.button {
+  box-sizing: border-box;
+  padding: 8px 16px;
+  min-width: min-content;
+  background: none;
+  color: #FFFFFF;
+  border-radius: 12px;
+  border: 2px solid #464654;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  z-index: 0;
+  transition: background 0.3s ease-in-out;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.button:hover {
+  background: #292934;
+  border: 2px solid #464654;
+  cursor: pointer;
+}
+@media (max-width: 640px) {
+  .button {
+    font-size: 16px;
+  }
+}
+
+/*# sourceMappingURL=Calendar.module.css.map */

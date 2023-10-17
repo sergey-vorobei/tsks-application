@@ -1,0 +1,211 @@
+@import 'normalize.css';
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0 auto;
+  padding: 48px 36px;
+  height: 100vh;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  background: #1D1D26 fixed;
+}
+@media (max-width: 640px) {
+  body {
+    padding: 24px 18px;
+    font-size: 14px;
+  }
+}
+
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
+  -webkit-text-size-adjust: inherit;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #8C8C9E;
+}
+
+.App {
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+@media (max-width: 640px) {
+  .container {
+    gap: 24px;
+  }
+}
+
+.swiper .swiper-slide {
+  width: 100px;
+  display: flex;
+}
+@media (max-width: 640px) {
+  .swiper .swiper-slide {
+    width: 80px;
+  }
+}
+
+.swiper {
+  display: flex;
+  gap: 10px;
+  height: auto;
+  border-radius: 24px;
+  background: #292934;
+  overflow: hidden;
+}
+
+.tasksWrapper {
+  position: relative;
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.message {
+  font-size: 36px;
+  color: #8C8C9E;
+  text-align: center;
+  margin: auto;
+}
+@media (max-width: 640px) {
+  .message {
+    font-size: 30px;
+  }
+}
+
+.addButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  left: 50%;
+  bottom: 48px;
+  transform: translate(-50%, 0);
+  width: max-content;
+  padding: 36px;
+  border: none;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 4px 7px 24px 0 rgba(245, 110, 166, 0.25), 3px 3px 4px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.6s ease-in-out;
+  cursor: pointer;
+}
+.addButton::before, .addButton::after {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-image: linear-gradient(190deg, #FFCFAF 0%, #FF7BA3 51.56%, #C22BB3 100%);
+  transition: all 0.6s ease-in-out;
+  z-index: -1;
+}
+.addButton:after {
+  background-image: linear-gradient(190deg, #C22BB3 0%, #FF7BA3 51.56%, #FFCFAF 100%);
+  opacity: 0;
+}
+.addButton:hover {
+  transform: translate(-50%, 3px);
+}
+.addButton:hover:after {
+  opacity: 1;
+}
+.addButton svg path {
+  stroke: white;
+}
+@media (max-width: 640px) {
+  .addButton {
+    padding: 24px;
+  }
+}
+
+.form {
+  display: flex;
+  gap: 36px;
+  flex-direction: column;
+  width: 100%;
+  padding: 36px;
+}
+
+.modalFormFieldWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.daysBtnWrapper {
+  display: flex;
+  gap: 16px;
+}
+
+.daysBtn {
+  padding: 8px 16px;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 16px;
+  color: #8C8C9E;
+  border-radius: 24px;
+  background: #33333E;
+  border: 2px solid transparent;
+  transition: all 0.3s;
+}
+.daysBtn:hover {
+  background: none;
+  border: 2px solid #464654;
+  cursor: pointer;
+}
+
+.modalBtnWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+  z-index: 0;
+  gap: 16px;
+}
+
+.loaderContainer {
+  margin: 0 auto;
+  height: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.errorMessage {
+  color: #FF7BA3;
+  font-size: 15px;
+}
+
+/*# sourceMappingURL=Tasks.module.css.map */

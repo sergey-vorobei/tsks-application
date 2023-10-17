@@ -1,0 +1,26 @@
+services:
+  mongodb:
+    build:
+      context: docker-compose/mongo
+    container_name: mongodb
+    volumes:
+      - mongodb_data:/data/db
+      - ./docker-compose/mongo/entrypoint:/docker-entrypoint-initdb.d
+      - ./docker-compose/mongo/keyfile/mongo-keyfile:/data/keyfile/mongo-keyfile
+    ports:
+      - 27017:27017
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=userAdmin
+      - MONGO_INITDB_ROOT_PASSWORD=userPassword
+      - MONGO_INITDB_DATABASE=todoapp
+  todo-app-backend:
+    container_name: todoapp_backend
+    build:
+      context: backend/.
+      args:
+        TODO_APP_BACKEND_PORT: 8080
+    restart: always
+    ports:
+      - 8080:8080
+volumes:
+  mongodb_data: {}

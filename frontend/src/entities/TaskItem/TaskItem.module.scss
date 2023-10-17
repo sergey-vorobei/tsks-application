@@ -1,0 +1,109 @@
+@import '../../app/assets/styles/index';
+
+.container {
+  flex: 0;
+  width: 100%;
+  min-width: 220px;
+  padding: 16px 24px;
+  background: $secondary-background-color;
+  border-radius: 24px;
+  filter: blur(0px);
+  transition: all 0.6s ease-in-out;
+}
+
+.block {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  &:hover {
+    .closeBtn {
+      opacity: 0.5;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.taskDetails {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.description {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.date {
+  color: $secondary-font-color;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.dateWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.blur-x1 {
+  filter: blur(1px);
+}
+
+.blur-x2 {
+  filter: blur(2px);
+}
+
+.input {
+  padding: 0;
+  display: flex;
+  width: 100%;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  background: none;
+  border: none;
+  color: $secondary-font-color;
+  outline: none;
+  text-overflow: ellipsis;
+}
+
+.closeBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity ease 0.5s;
+}
+
+.errorMessage {
+  color: $hover-color;
+  font-size: 15px;
+}
+
+.deleting {
+  animation: all 2s ease-in-out forwards;
+  @keyframes all {
+    from {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+}

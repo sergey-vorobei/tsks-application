@@ -1,0 +1,33 @@
+@import '../../app/assets/styles/index';
+
+.button {
+  min-width: max-content;
+  padding: 8px 16px;
+  background-color: $main-background-color;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: $main-font-color;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    border: 2px solid #646475;
+    cursor: pointer;
+  }
+
+  @include md-device {
+    font-size: 16px;
+  }
+}
+
+.border {
+  transition: all 0.3s ease-in-out;
+  border: 2px solid #646475;
+
+  &:hover {
+    background-color: $secondary-background-color;
+  }
+}

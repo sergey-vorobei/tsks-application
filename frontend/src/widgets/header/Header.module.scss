@@ -1,0 +1,41 @@
+@import '../../app/assets/styles/index';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logoBlock {
+  display: flex;
+  align-items: center;
+}
+
+.logoIcon {
+  margin-right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  background-image: $gradient-accent-color;
+  box-shadow: 4px 7px 24px 0px $main-box-shadow-color, 3px 3px 4px 0px $secondary-box-shadow-color;
+}
+
+.logoText {
+  font-size: 24px;
+  font-weight: 700;
+  color: $main-font-color;
+  text-decoration: none;
+}
+
+.blockButtons {
+  display: flex;
+  gap: 8px;
+}
+
+.button {
+  cursor: pointer;
+}

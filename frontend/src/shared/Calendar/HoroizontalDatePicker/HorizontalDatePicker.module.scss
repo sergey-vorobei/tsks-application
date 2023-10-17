@@ -1,0 +1,123 @@
+@import '../../../app/assets/styles/index';
+
+.dateDayItem {
+  display: flex;
+  padding: 16px 24px;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  border: 2px solid $secondary-background-color;
+  border-radius: 24px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  color: $secondary-font-color;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  position: relative;
+
+  &:not(.dateDayItemSelected):hover  {
+    cursor: pointer;
+    border: 2px solid $secondary-accent-color;
+    transition: all 0.7s ease-in-out;
+  }
+
+  @include md-device {
+    padding: 8px 6px;
+    gap: 2px;
+  }
+
+  &:not(.dateDayItemSelected):active {
+    cursor: grab;
+  }
+}
+
+.today {
+  border: 2px solid $secondary-accent-color;
+}
+
+.dateDayItemSelected {
+  position: relative;
+  cursor: pointer;
+
+  &:active {
+    cursor: grab;
+  }
+
+  &:before {
+    width: 100px;
+    height: 110px;
+    background: $gradient-accent-color;
+    content: "";
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+    @include md-device {
+      width: 80px;
+      height: 83px;
+    }
+  }
+
+  &:after {
+    width: 98px;
+    height: 108px;
+    background: $secondary-background-color;
+    content: "";
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+    @include md-device {
+      width: 78px;
+      height: 81px;
+    }
+  }
+}
+
+.dayLabel {
+  text-align: center;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  z-index: 3;
+}
+
+.dateLabel {
+  text-align: center;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  z-index: 3;
+}
+
+.withTasks {
+  color: $main-font-color;
+}
+
+.markedLabel {
+  margin-top: 10px;
+}
+
+.pointHidden {
+  height: 8px;
+  width: 8px;
+  border-radius: 4px;
+  background: none;
+  z-index: 999;
+}
+
+.point {
+  background-image: $gradient-accent-color;
+}

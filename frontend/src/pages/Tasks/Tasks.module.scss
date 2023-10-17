@@ -1,0 +1,130 @@
+@import '../../app/assets/styles/index';
+
+.tasksWrapper {
+  position: relative;
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.message {
+  font-size: 36px;
+  color: $secondary-font-color;
+  text-align: center;
+  margin: auto;
+
+  @include md-device {
+    font-size: 30px;
+  }
+}
+
+.addButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  left: 50%;
+  bottom: 48px;
+  transform: translate(-50%, 0);
+  width: max-content;
+  padding: 36px;
+  border: none;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 4px 7px 24px 0 $main-box-shadow-color, 3px 3px 4px 0 $secondary-box-shadow-color;
+  transition: all 0.6s ease-in-out;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-image: $gradient-accent-color;
+    transition: all 0.6s ease-in-out;
+    z-index: -1;
+  }
+
+  &:after {
+    background-image: $gradient-hover-color;
+    opacity: 0;
+  }
+
+  &:hover {
+    transform: translate(-50%, 3px);
+    &:after {
+      opacity: 1;
+    }
+  }
+
+  svg {
+    path {
+      stroke: white;
+    }
+  }
+
+  @include md-device {
+    padding: 24px;
+  }
+}
+
+.form {
+  display: flex;
+  gap: 36px;
+  flex-direction: column;
+  width: 100%;
+  padding: 36px;
+}
+.modalFormFieldWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.daysBtnWrapper {
+  display: flex;
+  gap: 16px;
+}
+
+.daysBtn {
+  padding: 8px  16px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 16px;
+  color: $secondary-font-color;
+  border-radius: 24px;
+  background: #33333E;
+  border: 2px solid transparent;
+  transition: all 0.3s;
+
+  &:hover {
+    background: none;
+    border: 2px solid $secondary-accent-color;
+    cursor: pointer;
+  }
+}
+
+.modalBtnWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+  z-index: 0;
+  gap: 16px;
+}
+
+.loaderContainer{
+  margin: 0 auto;
+  height: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.errorMessage {
+  color: $hover-color;
+  font-size: 15px;
+}
